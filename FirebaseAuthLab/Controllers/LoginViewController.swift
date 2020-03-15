@@ -15,15 +15,15 @@ enum LoginState {
 }
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private var currentState: LoginState = .newUser
+    private var currentState: LoginState = .existingUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func logInPressed(_ sender: UIButton) {
@@ -36,10 +36,21 @@ class LoginViewController: UIViewController {
     
     private func continueLoginFlow(email: String, password: String) {
         if currentState == .existingUser {
-            
+            AuthenticationSession.shared.signExistingUser(email: email, password: password) { [weak self] (result) in
+                switch result {
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self?.showAlert(title: "Error", message: error.localizedDescription)
+                    }
+                case .success:
+                    DispatchQueue.main.async {
+                        self?.navigateToMainView()
+                    }
+                }
+            }
         } else {
             AuthenticationSession.shared.createNewUser(email: email, password: password) { [weak self] (result)
-                 in
+                in
                 switch result {
                 case .failure(let error):
                     DispatchQueue.main.async {
@@ -53,24 +64,24 @@ class LoginViewController: UIViewController {
     }
     
     private func createDatabaseUser(authDataResult: AuthDataResult) {
-      DatabaseService.shared.createDatabaseUser(authDataResult: authDataResult) { [weak self] (result) in
-        switch result {
-        case .failure(let error):
-          DispatchQueue.main.async {
-            self?.showAlert(title: "Account error", message: error.localizedDescription)
-          }
-        case .success:
-          DispatchQueue.main.async {
-            self?.navigateToMainView()
-          }
+        DatabaseService.shared.createDatabaseUser(authDataResult: authDataResult) { [weak self] (result) in
+            switch result {
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Account error", message: error.localizedDescription)
+                }
+            case .success:
+                DispatchQueue.main.async {
+                    self?.navigateToMainView()
+                }
+            }
         }
-      }
     }
     
     private func navigateToMainView() {
-      UIViewController.showViewController(storyBoardName: "MainView", viewControllerId: "ProfileViewController")
+        UIViewController.showViewController(storyBoardName: "Main", viewControllerId: "ProfileViewController")
     }
-
+    
     
     
 }

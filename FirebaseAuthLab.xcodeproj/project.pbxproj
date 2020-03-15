@@ -17,6 +17,9 @@
 		0C4FFB89241DB604004F925C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB88241DB604004F925C /* LoginViewController.swift */; };
 		0C4FFB8B241DB956004F925C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FFB8A241DB956004F925C /* GoogleService-Info.plist */; };
 		0C4FFB91241DBB18004F925C /* UIViewController + Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB90241DBB18004F925C /* UIViewController + Alerts.swift */; };
+		0C4FFB94241DBF65004F925C /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB93241DBF65004F925C /* AuthenticationSession.swift */; };
+		0C4FFB96241DC233004F925C /* DatabaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB95241DC233004F925C /* DatabaseServices.swift */; };
+		0C4FFB98241DC464004F925C /* UIViewController + Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB97241DC464004F925C /* UIViewController + Navigation.swift */; };
 		F44C9EB845654CA370894AC3 /* Pods_FirebaseAuthLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA667FB25940E99D8A4990F7 /* Pods_FirebaseAuthLab.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +37,9 @@
 		0C4FFB88241DB604004F925C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0C4FFB8A241DB956004F925C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C4FFB90241DBB18004F925C /* UIViewController + Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alerts.swift"; sourceTree = "<group>"; };
+		0C4FFB93241DBF65004F925C /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
+		0C4FFB95241DC233004F925C /* DatabaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServices.swift; sourceTree = "<group>"; };
+		0C4FFB97241DC464004F925C /* UIViewController + Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Navigation.swift"; sourceTree = "<group>"; };
 		CA667FB25940E99D8A4990F7 /* Pods_FirebaseAuthLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFEBFE5B2F8BC25054E5285 /* Pods-FirebaseAuthLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthLab.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthLab/Pods-FirebaseAuthLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +79,7 @@
 			children = (
 				0C4FFB8C241DB985004F925C /* Controllers */,
 				0C4FFB8D241DB9AF004F925C /* Storyboards */,
+				0C4FFB92241DBF42004F925C /* Firebase Services */,
 				0C4FFB8F241DBA9F004F925C /* Extensions */,
 				0C4FFB8E241DBA8A004F925C /* Supporting Files */,
 				0C4FFB6A24194BB3004F925C /* AppDelegate.swift */,
@@ -114,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				0C4FFB90241DBB18004F925C /* UIViewController + Alerts.swift */,
+				0C4FFB97241DC464004F925C /* UIViewController + Navigation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0C4FFB92241DBF42004F925C /* Firebase Services */ = {
+			isa = PBXGroup;
+			children = (
+				0C4FFB93241DBF65004F925C /* AuthenticationSession.swift */,
+				0C4FFB95241DC233004F925C /* DatabaseServices.swift */,
+			);
+			path = "Firebase Services";
 			sourceTree = "<group>";
 		};
 		8FDE9435A1DD5446102BDBA4 /* Frameworks */ = {
@@ -256,7 +273,10 @@
 				0C4FFB6F24194BB3004F925C /* ViewController.swift in Sources */,
 				0C4FFB6B24194BB3004F925C /* AppDelegate.swift in Sources */,
 				0C4FFB6D24194BB3004F925C /* SceneDelegate.swift in Sources */,
+				0C4FFB94241DBF65004F925C /* AuthenticationSession.swift in Sources */,
 				0C4FFB91241DBB18004F925C /* UIViewController + Alerts.swift in Sources */,
+				0C4FFB98241DC464004F925C /* UIViewController + Navigation.swift in Sources */,
+				0C4FFB96241DC233004F925C /* DatabaseServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

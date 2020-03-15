@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="KDl-dO-W6C">
             <objects>
-                <viewController id="xfa-lA-NoG" sceneMemberID="viewController">
+                <viewController id="xfa-lA-NoG" customClass="LoginViewController" customModule="FirebaseAuthLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8y2-2B-Ctn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unspecified-copy" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-sU-WdE">
-                                <rect key="frame" x="140" y="112" width="134" height="134.00000000000023"/>
+                                <rect key="frame" x="140" y="112" width="134" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rV1-sU-WdE" secondAttribute="height" multiplier="1:1" id="KR7-Dn-D9e"/>
                                 </constraints>
@@ -56,6 +56,9 @@
                                 <rect key="frame" x="140" y="471" width="134" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInPressed:" destination="xfa-lA-NoG" eventType="touchUpInside" id="Cmd-2D-y3H"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88690286870000001" green="0.60890620949999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -79,6 +82,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aZu-0V-8kf"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fCD-kb-z5l" id="ps3-BM-JXE"/>
+                        <outlet property="passwordTextField" destination="UTF-og-wci" id="Zgc-UP-5Ow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faz-xG-b5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

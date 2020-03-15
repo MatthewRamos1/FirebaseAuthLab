@@ -15,6 +15,8 @@
 		0C4FFB7724194BB4004F925C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FFB7524194BB4004F925C /* LaunchScreen.storyboard */; };
 		0C4FFB87241D6AF2004F925C /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FFB86241D6AF2004F925C /* LoginScreen.storyboard */; };
 		0C4FFB89241DB604004F925C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB88241DB604004F925C /* LoginViewController.swift */; };
+		0C4FFB8B241DB956004F925C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FFB8A241DB956004F925C /* GoogleService-Info.plist */; };
+		0C4FFB91241DBB18004F925C /* UIViewController + Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4FFB90241DBB18004F925C /* UIViewController + Alerts.swift */; };
 		F44C9EB845654CA370894AC3 /* Pods_FirebaseAuthLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA667FB25940E99D8A4990F7 /* Pods_FirebaseAuthLab.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		0C4FFB7824194BB4004F925C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C4FFB86241D6AF2004F925C /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		0C4FFB88241DB604004F925C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0C4FFB8A241DB956004F925C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C4FFB90241DBB18004F925C /* UIViewController + Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alerts.swift"; sourceTree = "<group>"; };
 		CA667FB25940E99D8A4990F7 /* Pods_FirebaseAuthLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFEBFE5B2F8BC25054E5285 /* Pods-FirebaseAuthLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthLab.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthLab/Pods-FirebaseAuthLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,17 +71,51 @@
 		0C4FFB6924194BB3004F925C /* FirebaseAuthLab */ = {
 			isa = PBXGroup;
 			children = (
+				0C4FFB8C241DB985004F925C /* Controllers */,
+				0C4FFB8D241DB9AF004F925C /* Storyboards */,
+				0C4FFB8F241DBA9F004F925C /* Extensions */,
+				0C4FFB8E241DBA8A004F925C /* Supporting Files */,
 				0C4FFB6A24194BB3004F925C /* AppDelegate.swift */,
 				0C4FFB6C24194BB3004F925C /* SceneDelegate.swift */,
-				0C4FFB6E24194BB3004F925C /* ViewController.swift */,
-				0C4FFB88241DB604004F925C /* LoginViewController.swift */,
-				0C4FFB7024194BB3004F925C /* Main.storyboard */,
-				0C4FFB86241D6AF2004F925C /* LoginScreen.storyboard */,
 				0C4FFB7324194BB4004F925C /* Assets.xcassets */,
 				0C4FFB7524194BB4004F925C /* LaunchScreen.storyboard */,
 				0C4FFB7824194BB4004F925C /* Info.plist */,
+				0C4FFB8A241DB956004F925C /* GoogleService-Info.plist */,
 			);
 			path = FirebaseAuthLab;
+			sourceTree = "<group>";
+		};
+		0C4FFB8C241DB985004F925C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C4FFB88241DB604004F925C /* LoginViewController.swift */,
+				0C4FFB6E24194BB3004F925C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0C4FFB8D241DB9AF004F925C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0C4FFB86241D6AF2004F925C /* LoginScreen.storyboard */,
+				0C4FFB7024194BB3004F925C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0C4FFB8E241DBA8A004F925C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C4FFB8F241DBA9F004F925C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C4FFB90241DBB18004F925C /* UIViewController + Alerts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8FDE9435A1DD5446102BDBA4 /* Frameworks */ = {
@@ -159,6 +197,7 @@
 			files = (
 				0C4FFB7724194BB4004F925C /* LaunchScreen.storyboard in Resources */,
 				0C4FFB7424194BB4004F925C /* Assets.xcassets in Resources */,
+				0C4FFB8B241DB956004F925C /* GoogleService-Info.plist in Resources */,
 				0C4FFB87241D6AF2004F925C /* LoginScreen.storyboard in Resources */,
 				0C4FFB7224194BB3004F925C /* Main.storyboard in Resources */,
 			);
@@ -217,6 +256,7 @@
 				0C4FFB6F24194BB3004F925C /* ViewController.swift in Sources */,
 				0C4FFB6B24194BB3004F925C /* AppDelegate.swift in Sources */,
 				0C4FFB6D24194BB3004F925C /* SceneDelegate.swift in Sources */,
+				0C4FFB91241DBB18004F925C /* UIViewController + Alerts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

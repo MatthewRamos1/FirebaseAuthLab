@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInPressed(_ sender: UIButton) {
-        
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
     }
 }

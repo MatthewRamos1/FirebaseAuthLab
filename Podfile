@@ -9,5 +9,6 @@ target 'FirebaseAuthLab' do
     pod 'Firebase/Auth'
     pod 'Firebase/Analytics'
     pod 'Firebase/Firestore'
+    pod 'Kingfisher'
 
 end

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var displayNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -18,12 +19,35 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-
-    @IBAction func updatePressed(_ sender: UIButton) {
-        
+        updateUI()
     }
     
+    @IBAction func updatePressed(_ sender: UIButton) {
+        guard let displayName = displayNameField.text, !displayName.isEmpty, let email = emailField.text, !email.isEmpty, let phoneNum = phoneNumField.text, !phoneNum.isEmpty else {
+            showAlert(title: "Missing Fields", message: "Please complete all fields before updating.")
+            return
+        }
+        let request = Auth.auth().currentUser?.createProfileChangeRequest()
+        request?.displayName = displayName
+        request?.commitChanges { [unowned self] (error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.showAlert(title: "Error updating profile", message: error.localizedDescription)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.showAlert(title: "Profile Update", message: "Profile successfully updated.")
+                }
+            }
+        }
+    }
+    
+    private func updateUI() {
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
+        emailField.text = user.email
+        displayNameField.text = user.displayName
+        phoneNumField.text = user.phoneNumber
+    }
 }
-

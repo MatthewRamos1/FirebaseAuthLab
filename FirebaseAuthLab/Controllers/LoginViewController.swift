@@ -18,12 +18,28 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var toggleStateButton: UIButton!
     
     private var currentState: LoginState = .existingUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    @IBAction func toggleStatePressed(_ sender: UIButton) {
+        let logIn = "Log In"
+        let signUp = "Sign Up"
+        if currentState == .existingUser {
+            logInButton.titleLabel?.text = signUp
+            toggleStateButton.titleLabel?.text = logIn
+            currentState = .newUser
+        } else {
+            logInButton.titleLabel?.text = logIn
+            toggleStateButton.titleLabel?.text = signUp
+            currentState = .existingUser
+        }
     }
     
     @IBAction func logInPressed(_ sender: UIButton) {

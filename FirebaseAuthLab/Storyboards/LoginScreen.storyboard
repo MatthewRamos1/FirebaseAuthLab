@@ -24,6 +24,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="toggleStatePressed:" destination="xfa-lA-NoG" eventType="touchUpInside" id="Bj4-bM-POY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +56,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq8-1Q-bYJ">
-                                <rect key="frame" x="140" y="471" width="134" height="30"/>
+                                <rect key="frame" x="123" y="471" width="168" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
@@ -70,7 +73,7 @@
                             <constraint firstItem="fCD-kb-z5l" firstAttribute="top" secondItem="rV1-sU-WdE" secondAttribute="bottom" constant="60" id="6Sf-PS-heX"/>
                             <constraint firstItem="UTF-og-wci" firstAttribute="centerX" secondItem="8y2-2B-Ctn" secondAttribute="centerX" id="DWf-z2-kXM"/>
                             <constraint firstItem="ue6-el-Ur4" firstAttribute="width" secondItem="8y2-2B-Ctn" secondAttribute="width" multiplier="0.75" id="HJM-ZR-SGp"/>
-                            <constraint firstItem="tq8-1Q-bYJ" firstAttribute="width" secondItem="UTF-og-wci" secondAttribute="width" multiplier="0.480287" id="LWR-G3-2dK"/>
+                            <constraint firstItem="tq8-1Q-bYJ" firstAttribute="width" secondItem="UTF-og-wci" secondAttribute="width" multiplier="0.6" id="LWR-G3-2dK"/>
                             <constraint firstItem="ue6-el-Ur4" firstAttribute="centerY" secondItem="8y2-2B-Ctn" secondAttribute="centerY" id="NpY-Kc-hTb"/>
                             <constraint firstItem="tq8-1Q-bYJ" firstAttribute="centerX" secondItem="8y2-2B-Ctn" secondAttribute="centerX" id="Nr1-4K-MFv"/>
                             <constraint firstItem="ue6-el-Ur4" firstAttribute="centerX" secondItem="8y2-2B-Ctn" secondAttribute="centerX" id="R7a-Ib-k0e"/>
@@ -84,7 +87,9 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="fCD-kb-z5l" id="ps3-BM-JXE"/>
+                        <outlet property="logInButton" destination="tq8-1Q-bYJ" id="8mq-4b-dhf"/>
                         <outlet property="passwordTextField" destination="UTF-og-wci" id="Zgc-UP-5Ow"/>
+                        <outlet property="toggleStateButton" destination="7Sa-69-xVX" id="qBL-ue-AGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faz-xG-b5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
